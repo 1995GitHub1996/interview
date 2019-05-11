@@ -3,7 +3,6 @@
 // 像 String.toUpperCase() 这样的方法，返回的是全新的字符串，而不是修改原始字符串。
 
 // js字符串的行为就像只读的字符数组 故下面代码无法运行～～～ 参考思路
-
 var handle = function(sting, length) {
     // 源字符串长度
     let originStringLength  = 0;    
