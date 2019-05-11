@@ -14,7 +14,7 @@ var handle = function(nums) {
         if (num1 > num2) {//移动i
             // 这两个数的绝对值不相等
             res += 1;
-            //过滤掉相邻的绝对值相等的数
+            // 过滤掉相邻的绝对值相等的数
             while(i<=j && Math.abs(nums[i])==num1)
                 i++;
         } else if (num1 < num2) {// 这两个数的绝对值不相等    
