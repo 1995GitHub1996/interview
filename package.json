@@ -4,37 +4,10 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
-    "_amqplib@0.5.2@amqplib": "^0.5.2",
-    "_bitsyntax@0.0.4@bitsyntax": "^0.0.4",
-    "_bluebird@3.5.1@bluebird": "^3.5.1",
-    "_buffer-more-ints@0.0.2@buffer-more-ints": "^0.0.2",
-    "_core-util-is@1.0.2@core-util-is": "^1.0.2",
-    "_npm@6.0.0@npm": "^6.0.0",
-    "_inherits@2.0.3@inherits": "^2.0.3",
-    "_isarray@0.0.1@isarray": "^0.0.1",
-    "_safe-buffer@5.1.2@safe-buffer": "^5.1.2",
-    "bitsyntax": "^0.0.4",
-    "amqplib": "^0.5.2",
-    "bluebird": "^3.5.1",
-    "buffer-more-ints": "^0.0.2",
-    "core-util-is": "^1.0.2",
-    "inherits": "^2.0.3",
-    "isarray": "^0.0.1",
-    "npm": "^6.0.0",
-    "_string_decoder@0.10.31@string_decoder": "^0.10.31",
-    "safe-buffer": "^5.1.2",
-    "readable-stream": "^1.1.14",
-    "string_decoder": "^0.10.31",
-    "_readable-stream@1.1.14@readable-stream": "^1.1.14",
-    "_thenjs@2.1.0@thenjs": "^2.1.0",
-    "fs": "^0.0.1-security",
-    "thenjs": "^2.1.0",
-    "_fs@0.0.1-security@fs": "^0.0.1-security"
+    "thenjs": "^2.0.5",
+    "eslint": "^3.17.1"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    
+  }
 }

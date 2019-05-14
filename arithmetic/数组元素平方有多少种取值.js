@@ -1,6 +1,6 @@
 var handle = function(nums) {
-	if(nums==null  || nums.length==0)
-		return 0;
+    if(nums==null  || nums.length==0)
+        return 0;
 		
 	// result的缩写，最后的返回值
     let res = 0;
@@ -28,9 +28,9 @@ var handle = function(nums) {
             while(i<=j && Math.abs(nums[j])==num2)//去重
                 j--;
         }
-	}
+    }
 	
-    console.log(res)
+    console.log(res);
 };
 
 

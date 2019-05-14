@@ -26,15 +26,15 @@ var handle = function(sting, length) {
     if(newStringLength > length) return;
 
     while(originStringIndex > 0 && newStringIndex > originStringIndex){
-       if(string[originStringIndex] === ' '){
-            string[newStringIndex--] = '0'
-            string[newStringIndex--] = '2'
-            string[newStringIndex--] = '%'
-       } else {
-            string[newStringIndex--] = string[originStringIndex]
-       }
+        if(string[originStringIndex] === ' '){
+            string[newStringIndex--] = '0';
+            string[newStringIndex--] = '2';
+            string[newStringIndex--] = '%';
+        } else {
+            string[newStringIndex--] = string[originStringIndex];
+        }
 
-       originStringIndex--;
+        originStringIndex--;
     }
 };
 

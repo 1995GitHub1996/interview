@@ -1,9 +1,9 @@
 var handle = function(nums, k) {
-    let count = 0
+    let count = 0;
     let i = 0;
-    const j = nums.length - 1
+    const j = nums.length - 1;
 
-	while (i < j) {
+    while (i < j) {
 
         while (i < j && nums[i] === nums[i + 1]) {
             i++;
@@ -14,7 +14,7 @@ var handle = function(nums, k) {
         if( (i + 1 - count) === k){
             console.log('i:' + i);
             console.log('res:' + nums[i]);
-            console.log('count:' + count)
+            console.log('count:' + count);
             break;
         }
     }

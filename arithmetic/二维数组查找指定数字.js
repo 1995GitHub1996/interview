@@ -6,21 +6,21 @@ const matrix = [
 ];
 
 var getNum = function(matrix, rows, cols, num) {
-	let row = 0;
-	let col = cols - 1;
+    let row = 0;
+    let col = cols - 1;
 
-	while(row < rows && col > 0) {
-		if(matrix[row][col] === num){
-			console.log('yes')
-			return;
-		} else if(matrix[row][col] > num) {
-			col--;
-		} else {
-			row++;
-		}
-	}
-	console.log('no')
-	return;
+    while(row < rows && col > 0) {
+        if(matrix[row][col] === num){
+            console.log('yes');
+            return;
+        } else if(matrix[row][col] > num) {
+            col--;
+        } else {
+            row++;
+        }
+    }
+    console.log('no');
+    return;
 };
 
 getNum(matrix, 4, 6, 222);
