@@ -1,4 +1,4 @@
-// function   test(text){
+// function test(text){
 //   console.log(text);
 // }
 
@@ -11,22 +11,40 @@
 
 
 // function resolve(text){
-// 	console.log(text);
+//     console.log(text);
 // }
 
 // function runAsync(){
 //     var p = new Promise(function(resolve, reject){
+//         console.log('dd');
 //         //做一些异步操作
 //         setTimeout(function(){
 //             console.log('执行完成');
-//             resolve('随便什么数据');
+//             // resolve('随便什么正确数据');
+//             reject('随便什么错误数据');
 //         }, 2000);
 //     });
 //     return p;            
 // }
 
-// runAsync();
+// runAsync().then(function(success){
+//     console.log(success);
+// },function(err){
+//     console.log('err');
+// }).finally(() => {
+//     console.log('任何情况都执行');
+// });
 
+const p1 = new Promise(function (resolve, reject) {
+    setTimeout(() => reject(new Error('fail')), 900);
+});
+  
+// const p2 = new Promise(function (resolve, reject) {
+//     setTimeout(() => resolve(p1), 1000);
+// });
+  
+p1.then(result => console.log(result)).catch(error => console.log(error));
+    
 
 // function test() {
 //     for (var i = 0; i < 10; i++) {
@@ -276,31 +294,31 @@
 
 //test Promise.all 是否能使多个await并行
 
- function f1(){
-        new Promise((success,fail)=>{
-        setTimeout(success, 1000, 'hello world!');
-     }).then(s => {
-         console.log(s);
+// function f1(){
+//     new Promise((success,fail)=>{
+//         setTimeout(success, 1000, 'hello world!');
+//     }).then(s => {
+//         console.log(s);
          
-         return 'tgggg';
-     })
-}
+//         return 'tgggg';
+//     });
+// }
 
- function f2(params) {
-     return  new Promise((success, fail) => {
-        setTimeout(success, 2000, 'hi world!');
-    }).then(g=>{
-        return 'ff';
-    })
+// function f2(params) {
+//     return  new Promise((success, fail) => {
+//         setTimeout(success, 2000, 'hi world!');
+//     }).then(g=>{
+//         return 'ff';
+//     });
     
-}
+// }
 
 
- function name() {
-    Promise.race([f1()]).then(t=>{
-      console.log(t);
-  });
-}
+// function name() {
+//     Promise.race([f1()]).then(t=>{
+//         console.log(t);
+//     });
+// }
 
-name();
+// name();
 

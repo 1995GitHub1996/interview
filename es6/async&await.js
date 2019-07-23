@@ -21,28 +21,28 @@
 
 //3:
 
- async function getSomething() {
-    return "something";
-}
+//  async function getSomething() {
+//     return "something";
+// }
 
- function testAsync() {
-    return  new Promise(r=>{
-            setTimeout(() => {
-                r('dwq');
-            }, 1000);
-        }).then(f=>{
-            return f;
-        })
-}
+//  function testAsync() {s
+//     return  new Promise(r=>{
+//             setTimeout(() => {
+//                 r('dwq');
+//             }, 1000);
+//         }).then(f=>{
+//             return f;
+//         })
+// }
 
 
-async function test() {
-    const v1 = await testAsync();
-    const v2 = await getSomething();
-    console.log(v1, v2);
-}
+// async function test() {
+//     const v1 = await testAsync();
+//     const v2 = await getSomething();
+//     console.log(v1, v2);
+// }
 
-test();
+// test();
 
 
 // function takeLongTime() {
@@ -69,3 +69,15 @@ test();
 
 // test();
 
+async function fn() {
+    await Promise.reject(setTimeout(()=>{console.log(100)}, 1000))
+    
+    // await new Promise((res, rej) => {
+    //   setTimeout(() => {
+    //     console.log('qqqq');
+    //     res();
+    //   }, 1000);
+    // })
+}
+
+fn().then(e => console.log('d'), r => console.log('rr'))
