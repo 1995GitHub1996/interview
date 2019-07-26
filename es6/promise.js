@@ -35,15 +35,17 @@
 //     console.log('任何情况都执行');
 // });
 
-const p1 = new Promise(function (resolve, reject) {
-    setTimeout(() => reject(new Error('fail')), 900);
-});
+// const p1 = new Promise(function (resolve, reject) {
+//     console.log('ss');
+//     setTimeout(() => reject(new Error('fail')), 2100);
+// });
   
 // const p2 = new Promise(function (resolve, reject) {
 //     setTimeout(() => resolve(p1), 1000);
 // });
   
-p1.then(result => console.log(result)).catch(error => console.log(error));
+// const p1 = Promise.reject('dsdd');
+// p1.finally(() => {});
     
 
 // function test() {
@@ -100,36 +102,36 @@ p1.then(result => console.log(result)).catch(error => console.log(error));
 
 
 // 0.5秒后返回input*input的计算结果:
-// function multiply(input) {
-//     return new Promise(function (resolve, reject) {
-//         console.log('calculating ' + input + ' x ' + input + '...');
-//         setTimeout(resolve, 500, input * input);
-//     });
-// }
+function multiply(input) {
+    return new Promise(function (resolve, reject) {
+        console.log('calculating multiply' + input + ' x ' + input + '...');
+        setTimeout(resolve, 500, input * input);
+    });
+}
 
-// // 0.5秒后返回input+input的计算结果:
-// function add(input) {
-//     return new Promise(function (resolve, reject) {
-//         console.log('calculating ' + input + ' + ' + input + '...');
-//         setTimeout(resolve, 500, input + input);
-//     });
-// }
+// 0.5秒后返回input+input的计算结果:
+function add(input) {
+    return new Promise(function (resolve, reject) {
+        console.log('calculating add' + input + ' + ' + input + '...');
+        setTimeout(resolve, 500, input + input);
+    });
+}
 
-// var p = new Promise(function (resolve, reject) {
-//     console.log('start new Promise...');
-//     resolve(123);
-//     // reject(4);
-// });
+var p = new Promise(function (resolve, reject) {
+    console.log('start new Promise...');
+    resolve(2);
+    // reject(4);
+});
 
-//    p.then(multiply)
-//     .then(add)
-//     .then(multiply)
-//     .then(add)
-//     .then(function (result) {
-//         console.log('Got value: ' + result);
-//     }).catch(function (params) {
-//         console.log(params);
-//     });
+p.then(multiply)
+    .then(add)
+    .then(multiply)
+    .then(add)
+    .then(function (result) {
+        console.log('Got value: ' + result);
+    }).catch(function (params) {
+        console.log(params);
+    });
 
 
 // var p1 = new Promise(function (resolve, reject) {
