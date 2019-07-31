@@ -5,7 +5,8 @@ const moment = require('moment');
 async function remind() {
     const weatherData = await getWeather();
     const curDataWeather = _.find(weatherData.data, {date: timeString(new Date(), 'YYYY-MM-DD')})
-    await send(curDataWeather);
+    await send1(curDataWeather);
+    await send2(curDataWeather);
     return 0
   }
 
@@ -15,14 +16,26 @@ async function remind() {
     })
   }
 
-  function send(wetaherData) {
-    return axios.post('https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=103a6a5b-7d64-442a-86c9-07d2dc412c7c',{
+  function send1(wetaherData) {
+    return axios.post('https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=464212f7-b572-4650-b164-e7a24b8d0c91',{
             msgtype: 'text',
             text: {
-                'content': JSON.stringify(wetaherData, null, 4)
+                content: `郑州${wetaherData.day}天气：\n\n气温: 最低温:${wetaherData.tem2}, 最高温:${wetaherData.tem1}, ${wetaherData.wea}\n空气质量：${wetaherData.air_level}\n贴心小提示：${wetaherData.air_tips} \n\n`,
+                mentioned_mobile_list:["13137921493"]
             }
         })
   }
+
+  function send2(wetaherData) {
+    return axios.post('https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=103a6a5b-7d64-442a-86c9-07d2dc412c7c  ',{
+            msgtype: 'text',
+            text: {
+                content: `郑州${wetaherData.day}天气：\n\n气温: 最低温:${wetaherData.tem2}, 最高温:${wetaherData.tem1}, ${wetaherData.wea}\n空气质量：${wetaherData.air_level}\n贴心小提示：${wetaherData.air_tips} \n\n`,
+                mentioned_mobile_list:["13303968577","18336303285"]
+            }
+        })
+  }
+
 /**
  * 格式化一个时间字符串
  * @param time
