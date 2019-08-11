@@ -70,14 +70,17 @@
 // test();
 
 async function fn() {
-    await Promise.reject(setTimeout(()=>{console.log(100)}, 1000))
-    
-    // await new Promise((res, rej) => {
-    //   setTimeout(() => {
-    //     console.log('qqqq');
-    //     res();
-    //   }, 1000);
-    // })
+    return await new Promise((res, rej) => {
+      setTimeout(() => {
+        res('qqqq');
+      }, 1000);
+    })
 }
 
-fn().then(e => console.log('d'), r => console.log('rr'))
+async function test() {
+  let a;
+  await fn();
+}
+
+console.log('sad')
+// fn().then(e => console.log(e), r => console.log('rr'))

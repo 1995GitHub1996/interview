@@ -22,16 +22,39 @@
 //     };
 // }
 
-let iterable = {                    // 类数组对象可以使用 Array.prototype[Symbol.iterator]实现for……of
-    0: 'a',
-    1: 'b',
-    2: 'c',
-    [Symbol.iterator]: Array.prototype[Symbol.iterator],
-    length: 3,
-};
-let a = ['s', 'd'];
-console.log(a.toString());
-console.log(Array.prototype[Symbol.iterator].toString());
-for (let item of iterable) {
-    console.log(item); // 'a', 'b', 'c'
+// let iterable = {                    // 类数组对象可以使用 Array.prototype[Symbol.iterator]实现for……of
+//     0: 'a',
+//     1: 'b',
+//     2: 'c',
+//     [Symbol.iterator]: Array.prototype[Symbol.iterator],
+//     length: 3,
+// };
+// let a = ['s', 'd'];
+// console.log(a.toString());
+// console.log(Array.prototype[Symbol.iterator].toString());
+// for (let item of iterable) {
+//     console.log(item); // 'a', 'b', 'c'
+// }
+
+const arr = [{a:'a'}, {b:'b'}, {c:'c'}];
+
+function iterable(arr) {
+    let index = 0;
+    
+    return {
+        next: function () {
+            if(index < arr.length) {
+                console.log(arr[index++]);
+            } else {
+                index = null;
+                console.log('ddd');
+            }
+        }
+    };
 }
+
+let it = iterable(arr);
+it.next();
+it.next();
+it.next();
+it.next();
