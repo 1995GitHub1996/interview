@@ -6,7 +6,7 @@ async function remind() {
     const weatherData = await getWeather();
     const curDataWeather = _.find(weatherData.data, {date: timeString(new Date(), 'YYYY-MM-DD')})
     await send(curDataWeather);
-    return 0
+    return 0;
   }
 
   function getWeather() {
