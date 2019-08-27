@@ -81,23 +81,23 @@
 // var timer = new Timer();
 // setTimeout(() => console.log('s1: ', Timer().s1), 3100);  //s1:  3
 // setTimeout(() => console.log('s2: ',Timer().s2), 3100);   //s2:  0
-this.b = 'b';
-let a = {
-    b: 'c',
-    c: function () {
-        return this.b;
-    }
-};
+// this.b = 'b';
+// let a = {
+//     b: 'c',
+//     c: function () {
+//         return this.b;
+//     }
+// };
 
-let v = a.c;
-console.log(this);
+// let v = a.c;
+// console.log(this);
 
-let arr = [1,2,3].map(function(e) {
-    return this;
-});
+// let arr = [1,2,3].map(function(e) {
+//     return this;
+// });
 
 
-function concatenateAll(...args) {
-    console.log(args);
-}
-concatenateAll(1,2,3);
+// function concatenateAll(...args) {
+//     console.log(args);
+// }
+// concatenateAll(1,2,3);

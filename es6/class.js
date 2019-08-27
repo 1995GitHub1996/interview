@@ -28,3 +28,12 @@ console.log([1, 2, 3] instanceof new MyClass());
 
 const fn = myClass.getThis;
 console.log(fn().getThis());                      // 调用实例的getThis的getThis方法， 而不是prototype上的getThis方法
+
+
+function Dog() {
+    this.a = 'a';
+}
+
+const dog1 = new Dog();
+dog1.b = 'b';
+console.log(dog1.b);

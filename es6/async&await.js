@@ -70,17 +70,19 @@
 // test();
 
 async function fn() {
-    return await new Promise((res, rej) => {
-      setTimeout(() => {
-        res('qqqq');
-      }, 1000);
-    })
+  await new Promise((res, rej) => {
+    setTimeout(() => {
+      res()
+    }, 1000);
+  })
+  console.log('dsadasdad')
 }
 
-async function test() {
-  let a;
-  await fn();
-}
+fn()
+// async function test() {
+//   let a;
+//   await fn();
+// }
 
 console.log('sad')
 // fn().then(e => console.log(e), r => console.log('rr'))
