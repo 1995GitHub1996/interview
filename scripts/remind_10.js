@@ -2,24 +2,27 @@ const axios = require('axios');
 const _ = require('lodash');
 const moment = require('moment');
 
-async function remind() {
-    const weatherData = await getWeather();
-    const curDataWeather = _.find(weatherData.data, {date: timeString(new Date(), 'YYYY-MM-DD')})
-    await send(curDataWeather);
-    return 0
-  }
+const JU_HE_HOST = 'http://v.juhe.cn';
+const KEY = '69234b14a875f86a39f9053523926632';
 
-  function getWeather() {
-    return axios.get('https://www.tianqiapi.com/api/?version=v1&city=%E9%83%91%E5%B7%9E').then((data) => {
-        return data.data
+async function remind() {
+    const jokeData = await getJokeData();
+    let content = (!_.isEmpty(jokeData)) ? jokeData : '网络跑丢喽~~'
+    await send(content);
+    return timeString(new Date(), 'YYYY-MM-DD') + ': ' + content
+}
+
+  function getJokeData() {
+    return axios.get(`${JU_HE_HOST}/joke/randJoke.php?key=${KEY}`).then((data) => {
+        return _.get(data, ['data', 'result' , '0', 'content'], {})
     })
   }
 
-  function send(wetaherData) {
+  function send(jokeData) {
     return axios.post('https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=103a6a5b-7d64-442a-86c9-07d2dc412c7c  ',{
             msgtype: 'text',
             text: {
-                content: `郑州${wetaherData.day}天气：\n\n气温: 最低温:${wetaherData.tem2}, 最高温:${wetaherData.tem1}, ${wetaherData.wea}\n空气质量：${wetaherData.air_level}\n贴心小提示：${wetaherData.air_tips} \n\n`,
+                content: `每日一笑😁：\n\n ${jokeData}\n\n`,
                 mentioned_mobile_list:["13303968577","18336303285"]
             }
         })
