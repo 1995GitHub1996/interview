@@ -36,16 +36,16 @@
 
 //（1）一般函数this指向在执行是绑定  当运行obj.say()时候，this指向的是obj这个对象。
 
-// this.a = 'ff';
-// var obj = {
-//     x: 22,
-//     y: this,                            // 此处this为全局this
-//     say: () => {
-//         console.log(this.b);
-//     }
-// };
+this.a = 'ff';
+var obj = {
+    x: 22,
+    y: this,                            // 此处this为全局this
+    say: () => {
+        console.log(this.a);
+    }
+};
 
-// obj.say();
+obj.say();
 
 //console.log输出的是22
 
@@ -79,8 +79,10 @@
 //     }, 1000);
 // }
 // var timer = new Timer();
-// setTimeout(() => console.log('s1: ', Timer().s1), 3100);  //s1:  3
-// setTimeout(() => console.log('s2: ',Timer().s2), 3100);   //s2:  0
+
+// setTimeout(() => console.log('s1: ', timer.s1), 3100);
+// setTimeout(() => console.log('s11: ', timer.s2), 3100); 
+
 // this.b = 'b';
 // let a = {
 //     b: 'c',

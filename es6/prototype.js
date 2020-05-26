@@ -27,44 +27,43 @@ let Dog = class {                       // class中默认使用严格模式
     }
 };
 
-var point = new Point(1,3);
-var dog = new Dog(1,3);
+Dog.prototype.a = function () {
+    return 'dog';
+};
+var dog = new Dog();
+
 
 Object.prototype.toString = function () {
-    return this.x + this.y + '7';
+    return 'object';
 };
-Object.prototype.add = function () {
-    return 'sad';
-};
-const add1 = dog.add;
-console.log(add1.toString());
-// console.log(add());
-// console.log(dog.add());
-// console.log(point.toString());
-// console.log(dog.add());
-// console.log(Dog.add());
-// console.log(dog.toString());
-// console.log(dog instanceof Dog);
-console.log(dog.hasOwnProperty('add'));
 
-class Hi {
-    constructor() {
-        this.a = 'a';
-    }
-    add() {
-        console.log(this);
-    }
-}
+console.log(Function.prototype);
 
-let hi = new Hi();
-console.log(hi.__proto__ === Hi.prototype);
-console.log(hi.hasOwnProperty('a'));
-console.log(hi.__proto__.hasOwnProperty('add'));
+// Object.prototype.add = function () {
+//     return 'sad';
+// };
+// const add1 = dog.add;
+// console.log(add1.toString());
+// console.log(dog.hasOwnProperty('add'));
 
-let test = function() {
-    console.log(this);
-};
-test();
+// class Hi {
+//     constructor() {
+//         this.a = 'a';
+//     }
+//     add() {
+//         console.log(this);
+//     }
+// }
+
+// let hi = new Hi();
+// console.log(hi.__proto__ === Hi.prototype);
+// console.log(hi.hasOwnProperty('a'));
+// console.log(hi.__proto__.hasOwnProperty('add'));
+
+// let test = function() {
+//     console.log(this);
+// };
+// test();
 
 
 // var obj = {
@@ -96,5 +95,5 @@ test();
 // setTimeout(() => console.log('s1: ', timer.s1), 3100);  //s1:  3
 // setTimeout(() => console.log('s2: ',timer.s2), 3100);   //s2:  0
 
-this.a = 'a';
-console.log(this);
+// this.a = 'a';
+// console.log(this);

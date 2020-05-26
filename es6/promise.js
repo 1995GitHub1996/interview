@@ -102,36 +102,36 @@
 
 
 // 0.5秒后返回input*input的计算结果:
-function multiply(input) {
-    return new Promise(function (resolve, reject) {
-        console.log('calculating multiply' + input + ' x ' + input + '...');
-        setTimeout(resolve, 500, input * input);
-    });
-}
+// function multiply(input) {
+//     return new Promise(function (resolve, reject) {
+//         console.log('calculating multiply' + input + ' x ' + input + '...');
+//         setTimeout(resolve, 500, input * input);
+//     });
+// }
 
-// 0.5秒后返回input+input的计算结果:
-function add(input) {
-    return new Promise(function (resolve, reject) {
-        console.log('calculating add' + input + ' + ' + input + '...');
-        setTimeout(resolve, 500, input + input);
-    });
-}
+// // 0.5秒后返回input+input的计算结果:
+// function add(input) {
+//     return new Promise(function (resolve, reject) {
+//         console.log('calculating add' + input + ' + ' + input + '...');
+//         setTimeout(resolve, 500, input + input);
+//     });
+// }
 
-var p = new Promise(function (resolve, reject) {
-    console.log('start new Promise...');
-    resolve(2);
-    // reject(4);
-});
+// var p = new Promise(function (resolve, reject) {
+//     console.log('start new Promise...');
+//     resolve(2);
+//     // reject(4);
+// });
 
-p.then(multiply)
-    .then(add)
-    .then(multiply)
-    .then(add)
-    .then(function (result) {
-        console.log('Got value: ' + result);
-    }).catch(function (params) {
-        console.log(params);
-    });
+// p.then(multiply)
+//     .then(add)
+//     .then(multiply)
+//     .then(add)
+//     .then(function (result) {
+//         console.log('Got value: ' + result);
+//     }).catch(function (params) {
+//         console.log(params);
+//     });
 
 
 // var p1 = new Promise(function (resolve, reject) {
@@ -175,19 +175,28 @@ p.then(multiply)
 
 
 
-// var one =  function fn1(){
-//     return new Promise(function (success, fail) {
-//         setTimeout(() => {
-//             success('dwq');
-//         }, 2000);
-//     }).then(t => {
-//         return {
-//             name : t
-//         }
-//     });
-// }
+function fn1(){
+    return new Promise(function (success, fail) {
+        setTimeout(() => {
+            success('dwq');
+        }, 2000);
+    }).then(t => {
+        return {
+            name : t
+        };
+    });
+}
 
+async function a() {
+    console.log('b')
 
+    const b = await fn1()
+    console.log(b)
+    console.log('v')
+}
+console.log('sfs')
+a()
+console.log('sfsfdfs')
 // var res = [];
 
 

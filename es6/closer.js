@@ -1,6 +1,6 @@
 // function count() {
 //     var arr = [];
-//     for (var i=1; i<=3; i++) {
+//     for (let i=1; i<=3; i++) {
 //         arr.push(function () {
 //             return i * i;
 //         });
@@ -14,11 +14,17 @@
 // var f3 = results[2];
 
 // console.log(f1(), f2(), f3());  // 16 16 16c
+
+
 function init() {
-    var name = 'Mozilla'; // name 是一个被 init 创建的局部变量
-    function displayName() { // displayName() 是内部函数,一个闭包
-        console.log(name); // 使用了父函数中声明的变量
+    var a = 1;
+    function displayName() {
+        var b = 1;
+        console.log(++a);
+        console.log(++b);
     }
     return displayName;
 }
-init()();
+const fn = init();
+fn();
+fn();
