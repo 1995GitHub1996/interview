@@ -8,7 +8,8 @@
     "eslint": "^3.17.1",
     "express": "^4.17.1",
     "lodash": "^4.17.15",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "ts-node": "^8.8.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",

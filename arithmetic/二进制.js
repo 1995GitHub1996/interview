@@ -1,5 +1,5 @@
 var cal = function(num) {
-    console.log(num >> 2);
+    console.log(num >> 1);
 };
 
-cal(27);
+cal(11);
