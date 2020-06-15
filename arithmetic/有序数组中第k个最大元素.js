@@ -21,6 +21,6 @@ var handle = function(nums, k) {
 };
 
 
-const arr = [2,4,4,4,6,7,7,8];
+const arr = [2,4,7,4,6,7,7,8];
 
-handle(arr, 5);
+handle(arr, 2);
