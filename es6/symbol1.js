@@ -1,9 +1,7 @@
-function A() {
-    this.foo = 'hello';
-}
-  
-if (!global._foo) {
-    global._foo = new A();
-}
-  
-module.exports = global._foo;
+let arr = ['a', 'b', 'c'];
+let iter = arr[Symbol.iterator]();
+
+iter.next(); // { value: 'a', done: false }
+iter.next(); // { value: 'b', done: false }
+iter.next(); // { value: 'c', done: false }
+iter.next(); // { value: undefined, done: true }

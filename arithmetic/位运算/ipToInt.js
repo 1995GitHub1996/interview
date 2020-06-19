@@ -22,6 +22,7 @@ function intToIp(int) {
 
 const targetIp = '127.0.0.1';
 const int = ipToInt(targetIp);
+console.log(int);
 const ip = intToIp(int);
 
 console.log(ip === targetIp);

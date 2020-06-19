@@ -54,7 +54,7 @@ public class MyHashMap<K, V> implements MyMap<K, V>{
                     newNode.setValue(v);
                     size ++;
                     return v;
-                } 
+                };
                 newNode = node.getNextNode();
             }
             table[index] = new Node<K, V>(k, v, table[index]);
