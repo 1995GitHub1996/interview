@@ -8,6 +8,9 @@ var reverse = function (int) {
         y = y * 10 + int % 10;
         int = Math.floor(int / 10);
     }
-	
-    return (int === y) || (int === y / 10);
+    
+    return (int === y) || (int === Math.floor(y / 10));
 };
+
+const x = 12321;
+console.log(reverse(x));
