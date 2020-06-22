@@ -1,5 +1,3 @@
-const { max } = require('lodash');
-
 function maxSubString(str) {
     let maxNum = 0, start = 0;
     for (let i = 0; i < str.length; i++) {
@@ -10,7 +8,6 @@ function maxSubString(str) {
         }
     }
 
-    console.log(start);
     return str.slice(start, maxNum);
 }
 
