@@ -4,29 +4,32 @@ var options = { method: 'POST',
     url: 'https://open.work.weixin.qq.com/wwopen/colleague/comment',
     qs: { _: '1596193450693' },
     headers: 
-   { 'Postman-Token': 'c1e3b192-e9f4-49ac-8c29-cc4de53cb0e2',
-       'cache-control': 'no-cache',
-       Cookie: 'wwapp.cst=31D3022448365C12BBAC229995D6A61E692C40737A6AF6C89F60BAF318F4B525A827B4C74035D3FED307B909D9BB489F; wwapp.deviceid=6492d5e9-9d44-45f7-88e4-8fd01bd3821f; wwapp.st=E3AE5CE52D099BE707B4C86EF40F014ABF87C6CDFC8C2B78C607B2997806A422F3B264B9794EA2A21207A32E7272901F2A8AF8AE7189FA0789F250B0D761EFE4FDFA359EC84B461F1BC3A813DA05441EBE5D46DE6F8051AAED507790B9A61C2207DBF14A236B1094947A644BEF8A66A6F14361D477D0056481C43942E37BCB95; wwapp.vid=1688851114311063; wwrtx.sid=MoBQ59-ZvNX2YQ0LVkV66HEVl5Iy7KcOJiNzC9YSsiKEVRiVkihXFyExGomIX4YW; wwrtx.vst=93Z1UHgmcbiUXlqDsjoUJDHANga8rRWXcwVWioIWack5-edM68DKolYXbR_d3Vd0CWe-kL2SfCCDmcfSU_HaN2Fp_Z9NzFTmi4STib60zJVeXWOpEgyuChdktgFVVaKFAXRNeUIpch5nYmSg55doQXFRvtRR8zZVWDZp631hMOCPiGfXyD4lbMFSyU9b6OjzrGExlaam3-7b-6zgmT4G3tlq5Dlu3hEDUbh7A427UjuNbVokIpB0G2_IZKLXvvHXj2IwZ9TNhc9eJu0VS8dcZw; wwrtx.i18n_lan=zh-cn; _ga=GA1.2.1349881351.1596167206; _gid=GA1.2.2141778703.1596167206; Hm_lpvt_9364e629af24cb52acc78b43e8c9f77d=1596167204; Hm_lvt_9364e629af24cb52acc78b43e8c9f77d=1596167204; wwapp.corpid=1970324986026881; wwapp.sessionkey=; wwapp.termid=65538; wwrtx.c_gdpr=0; wwrtx.refid=4757094412800259; wap.sid=MoBQ59-ZvNX2YQ0LVkV66P-lkwbR3HB0HteBDM5jBYYh0r8c2i93aLjd_RahG7N4; wwopen.open.sid=wP51rfufRIWPzgwQgWyZfZJsXyoigs-UrEy-b5VCv0iw; wwrtx.ref=direct',
-       Referer: 'https://open.work.weixin.qq.com/wwopen/colleague/detail?code=2401ff997af1b6c1157235452f387851&version=3.0.8.2067&platform=mac',
-       'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) wxwork/3.0.8 (MicroMessenger/6.2) WeChat/2.0.4',
-       Connection: 'keep-alive',
-       'Content-Length': '135',
-       Origin: 'https://open.work.weixin.qq.com',
-       'Content-Type': 'application/x-www-form-urlencoded',
-       'Accept-Language': 'zh-cn',
-       'Accept-Encoding': 'gzip, deflate, br',
-       'X-Requested-With': 'XMLHttpRequest',
-       Accept: 'application/json',
-       Host: 'open.work.weixin.qq.com' },
+    { 'cache-control': 'no-cache',
+        'Postman-Token': 'c03bfd73-b76f-41fd-9098-fc8882e598ea,9cb3f0e8-5943-405f-932a-b95f411a2ed0',
+        'Cache-Control': 'no-cache',
+        Cookie: 'wwapp.cst=C2B4CB89FF20858DB83FA4CAE86EF7C5688465D13A26150B82E9335821406E3AFC92798616936232A7532D3BD07B52E3; wwapp.deviceid=13ce8820-a8cf-40d6-9daa-8b587c267299; wwapp.st=530639D81B4B379A0BFAFC557AC400D94E81A98B0D475439579FD1C88578ADE4E481E575A84D7ED3C8BA0134C5FD667DA47BB3A738C4B4DC2690E63DEEC8FBA07090704707E51516D19EF26853AD94C4807568E87EB2D910BCF413B4306E7ED2F1BC073454F190AF1CED618FAABC6138AD4B4ACDDB82D99649AEC97D41231A8658062D7DB57B9D4991711AC3A21BD8EB; wwapp.vid=1688851114311215; wwrtx.vst=cilZ73N5sIEn3w76bo0D1cH9DzJb5GOLvTJNSM16XRDhE329FmC-FMr_medPiKiduD4et8gEY2RWDHAJO_c6r5zR0otORZJ3MmrtXd-6yodnhLsFIuIDy6XJ_vJfHI_uDpeTqPNjWj17BpBCajeLfOo3NsnpfocE0CJmZVefP1QwkGiwsmujeMZhIYCXfErvV3bwPyRA3CyxbAakeLJa__RXxPoblY17qPZC2_CZ9_UwPmcwPEWvuDPWLgmQWVKeXzLVq20Yk9DsltCG4xNiWA; wwrtx.sid=mTQPIC9puFFVRHisjQSNOawrrh4hOMyhzaYIWg-6uHitHw_wWr1y1UcMv7Bso6-K; _qpsvr_localtk=1596161952348; wwopen.open.sid=wTqnNszULOnm4oLMOZ8oEN5WtN0HbRF5g0knHqtfi6Vs; wwrtx.ref=direct; wwrtx.i18n_lan=zh,wwapp.cst=C2B4CB89FF20858DB83FA4CAE86EF7C5688465D13A26150B82E9335821406E3AFC92798616936232A7532D3BD07B52E3; wwapp.deviceid=13ce8820-a8cf-40d6-9daa-8b587c267299; wwapp.st=530639D81B4B379A0BFAFC557AC400D94E81A98B0D475439579FD1C88578ADE4E481E575A84D7ED3C8BA0134C5FD667DA47BB3A738C4B4DC2690E63DEEC8FBA07090704707E51516D19EF26853AD94C4807568E87EB2D910BCF413B4306E7ED2F1BC073454F190AF1CED618FAABC6138AD4B4ACDDB82D99649AEC97D41231A8658062D7DB57B9D4991711AC3A21BD8EB; wwapp.vid=1688851114311215; wwrtx.vst=cilZ73N5sIEn3w76bo0D1cH9DzJb5GOLvTJNSM16XRDhE329FmC-FMr_medPiKiduD4et8gEY2RWDHAJO_c6r5zR0otORZJ3MmrtXd-6yodnhLsFIuIDy6XJ_vJfHI_uDpeTqPNjWj17BpBCajeLfOo3NsnpfocE0CJmZVefP1QwkGiwsmujeMZhIYCXfErvV3bwPyRA3CyxbAakeLJa__RXxPoblY17qPZC2_CZ9_UwPmcwPEWvuDPWLgmQWVKeXzLVq20Yk9DsltCG4xNiWA; wwrtx.sid=mTQPIC9puFFVRHisjQSNOawrrh4hOMyhzaYIWg-6uHitHw_wWr1y1UcMv7Bso6-K; _qpsvr_localtk=1596161952348; wwopen.open.sid=wTqnNszULOnm4oLMOZ8oEN5WtN0HbRF5g0knHqtfi6Vs; wwrtx.ref=direct; wwrtx.i18n_lan=zh; wwrtx.vst=Mn2ID723bXIvobL6CaiBGK_1Ump57RER15TsO8dB3xr2Oxo8Ohh_dQLs45BUn_mCIpH7ySKL2moB4tlQPk6bmHAM0hPqEOgDOQO1G6-2r-DkdMh8NnXdXNgizkhDMDrq6kEcoR73M7PnYlqM8xFic7M5B4r-cSdtLVcyVZB1VO5A7xcmhVKrdS8kxLVHzWElUKXcyVIrYdTNlWCcrmuXxk4GonugDC4-p1n4FE6T1Mm9Ls1wX1qMzRi33jxSyYgjCWlgxgIxChhvp8nshNyr-g',
+        Referer: 'https://open.work.weixin.qq.com/wwopen/colleague/detail?code=2401ff997af1b6c1157235452f387851&version=3.0.8.2067&platform=mac',
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) wxwork/3.0.8 (MicroMessenger/6.2) WeChat/2.0.4',
+        Connection: 'keep-alive',
+        Origin: 'https://open.work.weixin.qq.com',
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Accept-Language': 'zh-cn',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'X-Requested-With': 'XMLHttpRequest',
+        Accept: 'application/json',
+        Host: 'open.work.weixin.qq.com' },
     form: 
-   { content: '老板，#95加满！！！',
-       anony: 'false',
-       code: '2401ff997af1b6c1157235452f387851' } };
+    { content: '老板，#95加满！！！',
+        anony: 'false',
+        code: 'bdf7ad66e64233e99f68f01eb1640aa9' } };
 
 for (let index = 0; index < 200; index++) {
+    const arr = ['Perfect girl！！', '蒙蒙加油！！', '加油加油加油加油加油加油加油加油加油加油加油加油加油加油加油加油', '加油奥利给！！','加油加油加油！！', '怒赞!!!!', '小仙女加油！！', '你是最bang的！！！', '你是最棒的！！！'];
+    options.form.content = arr[Math.floor((Math.random()*arr.length))];
+          
     request(options, function (error, response, body) {
         if (error) throw new Error(error);
-
         console.log(body);
     });
 }
+    
